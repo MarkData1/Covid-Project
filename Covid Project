@@ -7,7 +7,6 @@ FROM `covidcase-358410.CovidData.CovidDeaths`
 
 SELECT *
 FROM `covidcase-358410.CovidData.CovidVaccinations`
-
  
 --Join (Reference)
 
