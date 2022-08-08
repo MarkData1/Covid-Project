@@ -18,7 +18,6 @@ and continent is not null
 GROUP BY location, population 
 Order BY percent_population_infected desc
 
-
 --Continents vs Death Rate
 
 SELECT continent, max (total_deaths) as total_death_count
@@ -57,7 +56,6 @@ where dea.continent is not null
 GROUP BY dea.continent, dea.location, dea.date, dea.population, vac.people_fully_vaccinated)
 Select *, (fully_vaccinated/Population)*100 as percent_vaccinated
 From Pop_Vac
-
 
 With topmax AS (Select dea.location, dea.population, Max(vac.people_fully_vaccinated) as max_vac
 From `covidcase-358410.CovidData.CovidDeaths` as dea
