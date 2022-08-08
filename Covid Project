@@ -1,3 +1,5 @@
+--Skills used: JOIN, CASE STATEMENT, UPDATE, CTE, COALESCE, PARTITION BY, FUNCTIONS (SUM, MAX), OPERATORS (LIKE, MULTIPLY, DIVIDE) CONDITIONS, ORDER BY, GROUP BY, UNION, TRIM, SUBSTRING
+
 --Simple Data exploring Death Data (Reference)
 
 SELECT * 
@@ -112,8 +114,19 @@ SELECT location, date, people_fully_vaccinated
 FROM `covidcase-358410.CovidData.CovidVaccinations`
 ORDER BY Date DESC
 
---Update Table (Example)
+--Update Table
 
 UPDATE `covidcase-358410.CovidData.CovidVaccinations`
 SET continent = Africa
 WHERE Location = Egypt
+
+--Trim 
+Select *, TRIM(location) as trim_location
+FROM `covidcase-358410.CovidData.CovidVaccinations`
+ORDER BY 1,2,3
+
+--Substring/LIKE
+SELECT SUBSTRING (Location,8,5) as states
+FROM `covidcase-358410.CovidData.CovidVaccinations`
+WHERE location LIKE '%Sta___'
+
