@@ -1,13 +1,14 @@
 --Simple Data exploring Death Data (Reference)
+
 SELECT * 
 FROM `covidcase-358410.CovidData.CovidDeaths`
 
---Simple Data exploring Death Data
+--Simple Data exploring Death Data (Reference)
 
 SELECT location, date, people_fully_vaccinated
 FROM `covidcase-358410.CovidData.CovidVaccinations`
 
---Countries with highest infection rate
+--Countries vs Infection Rate
 
 SELECT location, population, MAX(total_cases) as highest_infection_count, MAX((total_cases/population)*100) as percent_population_infected
 FROM `covidcase-358410.CovidData.CovidDeaths`
@@ -16,21 +17,6 @@ and continent is not null
 GROUP BY location, population 
 Order BY percent_population_infected desc
 
---Highest death count per population
-
-SELECT location, max (total_deaths) as total_death_count
-FROM `covidcase-358410.CovidData.CovidDeaths`
-WHERE continent is not null
-GROUP BY location
-Order BY total_death_count desc
-
---Continent Death Count 
-
-SELECT continent, max (total_deaths) as total_death_count
-FROM `covidcase-358410.CovidData.CovidDeaths`
-GROUP BY continent
-WHERE continent is not null
-Order BY total_death_count desc
 
 --Per continents death rate
 
