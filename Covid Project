@@ -1,11 +1,9 @@
 --Skills used: JOIN, CASE STATEMENT, UPDATE, CTE, COALESCE, PARTITION BY, FUNCTIONS (SUM, MAX), OPERATORS (LIKE, MULTIPLY, DIVIDE) CONDITIONS, ORDER BY, GROUP BY, UNION, TRIM, SUBSTRING
 
---Simple Data exploring Death Data (Reference)
+--Simple Data Exploring Data (Reference)
 
 SELECT * 
 FROM `covidcase-358410.CovidData.CovidDeaths`
-
---Simple Data exploring Death Data (Reference)
 
 SELECT *
 FROM `covidcase-358410.CovidData.CovidVaccinations`
